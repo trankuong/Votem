@@ -1,28 +1,4 @@
-//angular.module('MainCtrl', []).controller('MainController', ['$scope', function($scope) {
-app.controller('MainController', ['$scope', '$location', '$window', '$timeout', 'AppService', function($scope, $location, $window, $timeout, AppService) {
-
-	$scope.options = {
-		scales: {
-			yAxes: [
-				{
-					id: 'y-axis-1',
-					type: 'linear',
-					display: true,
-					position: 'left'
-				},
-				{
-					id: 'y-axis-2',
-					type: 'linear',
-					display: true,
-					position: 'right'
-				}
-			]
-		}
-	};
-
-	$scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-	$scope.data = [300, 500, 100];
-
+app.controller('MainController', ['$scope', '$location', '$window', 'AppService', function($scope, $location, $window, AppService) {
 
 	$scope.voteOptions = [1, 2, 3, 4];
 
@@ -97,6 +73,7 @@ app.controller('MainController', ['$scope', '$location', '$window', '$timeout', 
 		AppService.logout().then(
 			function(success) {
 				$scope.loggedIn = false;
+				$window.location.href = '/';
 			}
 		);
 	};
@@ -159,11 +136,9 @@ app.controller('MainController', ['$scope', '$location', '$window', '$timeout', 
 			$scope.ballotError = "Need proper ordering for vote on Commander and Vice. Choices should begin at 1 and should not repeat.";
 		}
 		else{
-			console.log($scope.formData);
 			$scope.ballotError = "";
 			AppService.votePost(1, info).then(
 				function(success){
-					console.log(success.data);
 					$scope.votedIn = success.data.electionids;
 				},
 				function(error){

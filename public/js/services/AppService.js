@@ -43,9 +43,8 @@ app.factory('AppService', ['$http', function($http) {
 			return $http.post('/vote/'+id, info);
 		},
 
-		// call to DELETE a nerd
-		delete : function(id) {
-			return $http.delete('/api/nerds/' + id);
+		totalVote : function(id) {
+			return $http.get('/totalvotes/'+id);
 		}
 	}
 }]);

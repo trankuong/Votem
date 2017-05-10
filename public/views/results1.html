@@ -4,10 +4,92 @@
 </div>
 
 
-<div class="col-md-6 col-md-offset-3" ng-if="Voted()">
+<div class="col-md-6 col-md-offset-3 ballot" ng-if="Voted()">
+	
+	<h1 class="ballot-title">Rough Election Updates</h1>
 
-	<canvas id="pie" class="chart chart-pie"
-		chart-data="data" chart-labels="labels" >
-	</canvas> 
+	<div class="row">
+		<h2 class="ballot-header">Federal and State</h2>
+	</div>
+
+	<fieldset id="group1">
+		<h3 class="ballot-section-title">
+			For Commander in Cream and Vice Ice
+		</h3>
+		<h3 class="ballot-section-title-extra">
+			(Ranked Choice Voting (Instant Runoff))
+		</h3>
+
+		<h4 class="ballot-section-detail">
+			Rank candidates in order of choice. Mark your favorite candidate as first choice and then indicate your second and additional back-up choices in order of choice. You may rank as many candidates as you want.
+		</h4>
+
+		<canvas id="bar" class="chart chart-bar"
+			chart-data="count.group1.data" chart-labels="count.group1.label" chart-series="count.group1.series" chart-options="legend">
+		</canvas
+	</fieldset>
+
+
+	<fieldset id="group2" required>
+		<h3 class="ballot-section-title">
+			For Chief Dairy Queen
+		</h3>
+		<h3 class="ballot-section-title-extra">
+			Unexpired Term (Vote in One Oval)
+			<br>
+			Shall Justice Mint C. Chip of the Supreme Court of the State of Ice Cream be retained in office for another term?
+		</h3>
+
+		<h4 class="ballot-section-detail">
+			Fill in the oval before the word "Yes" if you wish the offical to remain in office.
+			<br>
+			Fill in the oval before the word "No" if you do not wish the official to remain in office.
+		</h4>
+		
+		<canvas id="pie" class="chart chart-pie"
+			chart-data="count.group2.data" chart-labels="count.group2.label">
+		</canvas> 
+	</fieldset>
+
+
+
+	<fieldset id="group3">
+		<h3 class="ballot-section-title">
+			For State Rep. District M&M
+		</h3>
+		<h3 class="ballot-section-title-extra">
+			(Vote for two)
+		</h3>
+
+		<canvas id="doughnut" class="chart chart-doughnut"
+			chart-data="count.group3.data" chart-labels="count.group3.label">
+		</canvas> 
+	</fieldset>
+
+
+	<div class="row">
+		<h2 class="ballot-header">County</h2>
+	</div>
+
+	<fieldset id="group4" required>
+		<h3 class="ballot-section-title">
+			Ballot Issue
+		</h3>
+		<h3 class="ballot-section-title-extra">
+			Constitutional Initiative No. 116
+			<br>
+			(Vote in One Oval)
+		</h3>
+		<h3 class="ballot-section-title">
+			Make Vanilla (Over Chocolate) The Official Best Flavor
+		</h3>
+		
+		<h4 class="ballot-section-detail">This is a fiercely debated topic and CI-116 would officially enumberate in written legislative text in perpetuity which flavor has favor - namely vanilla is better, unequivocally, than chocolate.</h4>
+
+		<canvas id="pie" class="chart chart-pie"
+			chart-data="count.group4.data" chart-labels="count.group4.label">
+		</canvas> 
+	</fieldset>
+
 
 </div>
