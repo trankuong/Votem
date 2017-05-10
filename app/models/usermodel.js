@@ -1,4 +1,8 @@
+var db = require('../../config/db')
+
 var mongoose = require('mongoose');
+mongoose.connect(db.url, db.login);
+
 var Schema = mongoose.Schema;
 
 var userschema = new Schema({

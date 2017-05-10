@@ -38,7 +38,6 @@ router.post('/', function(req, res){
 
 			console.log("before user find");
 
-
 			// Check to see if user in system
 			User.findOne({user: req.body.user}, function(err, db_res){
 				console.log("returned");
