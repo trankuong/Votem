@@ -20,7 +20,9 @@ mongoose.connect(db.url, db.login);
 // Test to see if query returns
 var User = require('../models/usermodel');
 User.find().then(
-	console.log("returned from find");
+	function(){
+		console.log("returned from find");
+	}
 );
 
 // set up session secret
