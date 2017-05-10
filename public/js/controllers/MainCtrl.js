@@ -15,6 +15,7 @@ app.controller('MainController', ['$scope', '$location', '$window', 'AppService'
 	// Check if logged in
 	AppService.loginGet().then(
 		function(success){
+			console.log("login get is successful");
 			if(success.data.success){
 				AppService.voteGet().then(
 					function(success){
@@ -26,6 +27,10 @@ app.controller('MainController', ['$scope', '$location', '$window', 'AppService'
 			else{
 				$scope.loggedIn = false;
 			}
+		}
+		//delete under later
+		function(){
+			console.log("error in getting login");
 		}
 	);
 
