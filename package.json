@@ -1,7 +1,7 @@
 {
   "name": "starter-node-angular",
   "engines":{
-    "node" : "6.9.5",
+    "node" : "4.8.3",
     "npm" : "1.4.28"
   },
   "main": "server.js",
