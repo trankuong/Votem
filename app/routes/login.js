@@ -37,10 +37,11 @@ router.post('/', function(req, res){
 		else{
 
 			console.log("before user find");
-			
+
 
 			// Check to see if user in system
 			User.findOne({user: req.body.user}, function(err, db_res){
+				console.log("returned");
 				if(!db_res) {
 					if(err === undefined) res.status(422).json({error: "Username does not exist"});
 					else{
