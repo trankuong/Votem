@@ -1,12 +1,12 @@
 {
   "name": "starter-node-angular",
-  "engines":{
-    "node" : "0.10.37",
-    "npm" : "1.4.28"
+  "engines": {
+    "node": "0.10.37",
+    "npm": "1.4.28"
   },
   "main": "server.js",
   "scripts": {
-    "start" :"node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^1.0.2",
