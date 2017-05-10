@@ -54,6 +54,7 @@ app.controller('MainController', ['$scope', '$location', '$window', 'AppService'
 	$scope.login = function(username, password) {
 		AppService.loginPost(username, password).then(
 			function(response){
+				console.log("responsed");
 				AppService.voteGet().then(
 					function(success){
 						if(success.data.elections) $scope.votedIn = success.data.elections;
