@@ -1,0 +1,192 @@
+<div class="col-md-6 col-md-offset-3 ballot" ng-if="false || !Voted()">
+	
+	<h1 class="ballot-title">Votem Election Ballot</h1>
+
+	<form class="form-inline" data-ng-submit="sendBallot()">
+		
+		<div class="row">
+			<h2 class="ballot-header">Federal and State</h2>
+		</div>
+
+		{{ formData }}
+
+		<fieldset id="group1">
+			<h3 class="ballot-section-title">
+				For Commander in Cream and Vice Ice
+			</h3>
+			<h3 class="ballot-section-title-extra">
+				(Ranked Choice Voting (Instant Runoff))
+			</h3>
+
+			<h4 class="ballot-section-detail">
+				Rank candidates in order of choice. Mark your favorite candidate as first choice and then indicate your second and additional back-up choices in order of choice. You may rank as many candidates as you want.
+			</h4>
+
+			<div class="col-sm-12 dropdown-input">
+				<div class="form-group">
+					<select class="custom-select" data-ng-model=$parent.formData.group1["Reese"]>
+						<option selected></option>
+						<option data-ng-repeat="option in voteOptions">{{ option }}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					Reese WithoutASpoon - Democrat for C.I.C
+					<br>
+					Cherry Garcia - Democrat for Vice Ice
+				</div>
+			</div>
+
+			<div class="col-sm-12 dropdown-input">
+				<div class="form-group">
+					<select class="custom-select" data-ng-model=$parent.formData.group1["Choco"]>
+						<option selected></option>
+						<option data-ng-repeat="option in voteOptions">{{ option }}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					Choco 'Chip' Dough - Republican for C.I.C
+					<br>
+					Carmela Coney - Republican for Vice Ice
+				</div>
+			</div>
+
+			<div class="col-sm-12 dropdown-input">
+				<div class="form-group">
+					<select class="custom-select" data-ng-model=$parent.formData.group1["Magic"]>
+						<option selected></option>
+						<option data-ng-repeat="option in voteOptions">{{ option }}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					Magic Browny - Independent for C.I.C
+					<br>
+					Phish Food - Independent for Vice Ice
+				</div>
+			</div>
+
+			<div class="col-sm-12 dropdown-input">
+				<div class="form-group">
+					<select class="custom-select" data-ng-model=$parent.formData.group1[customS1]>
+						<option selected></option>
+						<option data-ng-repeat="option in voteOptions">{{ option }}</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" data-ng-model="$parent.$parent.customS1">
+				</div>
+			</div>
+
+
+		</fieldset>
+
+		<fieldset id="group2" required>
+			<h3 class="ballot-section-title">
+				For Chief Dairy Queen
+			</h3>
+			<h3 class="ballot-section-title-extra">
+				Unexpired Term (Vote in One Oval)
+				<br>
+				Shall Justice Mint C. Chip of the Supreme Court of the State of Ice Cream be retained in office for another term?
+			</h3>
+
+			<h4 class="ballot-section-detail">
+				Fill in the oval before the word "Yes" if you wish the offical to remain in office.
+				<br>
+				Fill in the oval before the word "No" if you do not wish the official to remain in office.
+			</h4>
+			
+			<div class="col-sm-12">
+				<div class="form-check">
+					<input required type="radio" name="group2" value="Yes" data-ng-model="$parent.formData.group2">Yes
+				</div>
+				
+				<div class="form-check">
+					<input required type="radio" name="group2" value="No" data-ng-model="$parent.formData.group2">No
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset id="group3">
+			<h3 class="ballot-section-title">
+				For State Rep. District M&M
+			</h3>
+			<h3 class="ballot-section-title-extra">
+				(Vote for two)
+			</h3>
+			
+			<div class="col-sm-12">
+				<div class="custom-controls-stacked">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" name="group3" data-ng-click="clickCheckbox('group3', 'P. Nut Butter (Republican)')">P. Nut Butter (Republican)
+					</div>
+					
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="checkbox checkbox-primary" name="group3" data-ng-click="clickCheckbox('group3', 'Cream C. Kol (Independent)')">Cream C. Kol (Independent)
+					</div>
+
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="checkbox checkbox-primary" name="group3" data-ng-click="clickCheckbox('group3', 'Marsh Mallow (Democrat)')">Marsh Mallow (Democrat)
+					</div>
+					
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="checkbox checkbox-primary" name="group3" data-ng-model="$parent.$parent.customChecked" data-ng-click="clickCheckbox('group3', customCheck)">
+						<input type="text" class="form-control" data-ng-model="$parent.$parent.customCheck">
+					</div>
+				</div>
+			</div>
+		</fieldset>
+
+		<div class="row">
+			<h2 class="ballot-header">County</h2>
+		</div>
+
+		<fieldset id="group4" required>
+			<h3 class="ballot-section-title">
+				Ballot Issue
+			</h3>
+			<h3 class="ballot-section-title-extra">
+				Constitutional Initiative No. 116
+				<br>
+				(Vote in One Oval)
+			</h3>
+			<h3 class="ballot-section-title">
+				Make Vanilla (Over Chocolate) The Official Best Flavor
+			</h3>
+			
+			<h4 class="ballot-section-detail">This is a fiercely debated topic and CI-116 would officially enumberate in written legislative text in perpetuity which flavor has favor - namely vanilla is better, unequivocally, than chocolate.</h4>
+
+			<div class="col-sm-12">
+				<div class="form-check">
+					<input required type="radio" name="group4" value="Yes" data-ng-model="$parent.formData.group4">Yes on CI - 116 (For Vanilla)
+				</div>
+				
+				<div class="form-check">
+					<input required type="radio" name="group4" value="No" data-ng-model="$parent.formData.group4">No on CI - 116 (No on Vanilla)
+				</div>
+			</div>
+		</fieldset>
+
+		<br>
+
+		<div class="form-group">
+			<label for="password" class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-12">
+				<input type="password" class="form-control" name="password" placeholder="Password" data-ng-model="$parent.$parent.ballotPass" required>
+			</div>
+		</div>
+
+		<br>
+		<br>
+
+		<p class="error" data-ng-if="ballotError.length">{{ ballotError }}</p>
+
+		<div class="col-sm-12">
+			<input type="submit" class="form-control" id="submit" value="Submit">
+		</div>
+		
+	</form>
+</div>
+
+<div class="col-md-4 col-md-offset-4 page-msg" ng-if="Voted()">
+	<h1><span class="glyphicon glyphicon-ok success" aria-hidden="true"></span>  Thank you for voting!</h1>
+</div>

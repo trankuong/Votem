@@ -1,0 +1,13 @@
+
+<div class="col-md-6 col-md-offset-3 page-msg" ng-if="false || !Voted()">
+	<h1><span class="glyphicon glyphicon-warning-sign error" aria-hidden="true"></span>  Please Vote Before Viewing Results</h1>
+</div>
+
+
+<div class="col-md-6 col-md-offset-3" ng-if="Voted()">
+
+	<canvas id="pie" class="chart chart-pie"
+		chart-data="data" chart-labels="labels" >
+	</canvas> 
+
+</div>

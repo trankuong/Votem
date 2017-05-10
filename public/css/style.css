@@ -1,0 +1,82 @@
+.page-msg{
+	text-align: center;
+	font-weight: bold !important;
+}
+
+.success{
+	color: green;
+	font-weight: bold;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+}
+
+.navbar {
+	margin-bottom: 0 !important;
+	border-radius: 0 !important;
+}
+
+.modal-header{
+	background-color: #6ca8e4;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+.modal {
+	position: absolute;
+	margin-top: 5%;
+	z-index: 10040;
+	overflow: auto;
+	overflow-y: auto;
+}
+
+.ballot{
+	margin: 4.33%;
+	padding-bottom: 1%;
+	border-style: groove;
+	border-width: 5px;
+	color: #002a4a;
+}
+
+.ballot-title{
+	text-align: center;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.ballot-header{
+	text-align: center;
+	font-weight: bold;
+	background-color: #f59c3c;
+}
+
+.ballot-section-title{
+	font-weight: bold;
+}
+
+.ballot-section-title-extra{
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+
+.ballot-section-detail{
+	font-style: italic;
+}
+
+input[type="checkbox"], input[type="radio"]{
+	cursor: pointer;
+}
+
+.dropdown-input{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#submit{
+	color: white;
+	font-weight: bold;
+	background-color: #1875e2;
+}
