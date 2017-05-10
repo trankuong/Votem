@@ -18,7 +18,7 @@ mongoose.connect(db.url, db.login);
 //mongoose.connect(db.url);
 
 // Test to see if query returns
-var User = require('app/models/usermodel');
+var User = require('./app/models/usermodel');
 User.find().then(
 	function(){
 		console.log("returned from find");
