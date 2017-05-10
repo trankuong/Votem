@@ -11,7 +11,7 @@ var app = express();
 var db = require('./config/db');
 
 // set our port
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 
 // Connect to mongodb
 mongoose.connect(process.env.MONGOLAB_URI || db.url);
@@ -58,6 +58,8 @@ require('./app/routes/routes')(app);
 
 console.log("server started");
 
-app.listen(port);
+server.listen(port, function(){
+	console.log("listening");
+});
 
 exports = module.exports = app;
