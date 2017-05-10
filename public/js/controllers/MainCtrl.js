@@ -27,7 +27,7 @@ app.controller('MainController', ['$scope', '$location', '$window', 'AppService'
 			else{
 				$scope.loggedIn = false;
 			}
-		}
+		},
 		//delete under later
 		function(){
 			console.log("error in getting login");
