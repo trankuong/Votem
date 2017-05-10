@@ -21,6 +21,11 @@ router.post('/', function(req, res){
 
 	sess = req.session;
 
+	console.log(sess);
+	console.log("received login request");
+	console.log(req);
+	console.log(req.body);
+
 	// If logged in already, don't need to relog in
 	if(sess.user) res.status(200).json({success: "Already logged in"});
 
