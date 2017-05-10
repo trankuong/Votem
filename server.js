@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 // config files
-var db = require('./config/db');
+var db = require('config/db');
 
 // set our port
 var port = process.env.PORT || 3000;
