@@ -14,7 +14,7 @@ var db = require('./config/db');
 var port = process.env.PORT || 8000;
 
 // Connect to mongodb
-mongoose.connect(process.env.MONGOLAB_URI || db.url);
+mongoose.connect(db.url);
 
 // set up session secret
 app.use(session({
