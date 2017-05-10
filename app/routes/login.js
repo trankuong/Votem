@@ -21,15 +21,13 @@ router.post('/', function(req, res){
 
 	sess = req.session;
 
-	console.log(sess);
-	console.log("received login request");
-	console.log(req);
 	console.log(req.body);
 
 	// If logged in already, don't need to relog in
 	if(sess.user) res.status(200).json({success: "Already logged in"});
 
 	else{
+		console.log("not logged in");
 		if(!req.body.user || (req.body.user === undefined) || 
 			 !req.body.password || (req.body.password === undefined) || 
 			 !req.body || (req.body === undefined)) res.status(401).json({error: "Need username and password"});
@@ -37,6 +35,8 @@ router.post('/', function(req, res){
 		// Check for valide characters in password
 		else if(!(/^[0-9A-Za-z., _+=@~`-]+$/.test(req.body.password))) res.status(400).json({error: "Password has non-allowed character"});
 		else{
+
+			console.log("before user find");
 
 			// Check to see if user in system
 			User.findOne({user: req.body.user}, function(err, db_res){
