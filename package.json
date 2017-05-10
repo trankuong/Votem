@@ -5,6 +5,9 @@
     "npm" : "1.4.28"
   },
   "main": "server.js",
+  "scripts": {
+    "start" :"node server.js"
+  },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "body-parser": "~1.4.2",
