@@ -15,7 +15,7 @@ var port = process.env.PORT || 3000;
 
 // Connect to mongodb
 console.log(db.url);
-mongoose.createConnection(db.url, db.login);
+mongoose.createConnection(db.url);
 //mongoose.connect(db.url);
 
 // Test to see if query returns
