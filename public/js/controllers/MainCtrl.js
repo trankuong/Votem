@@ -26,6 +26,7 @@ app.controller('MainController', ['$scope', '$location', '$window', 'AppService'
 				$scope.loggedIn = true;	
 			}
 			else{
+				console.log("not logged in");
 				$scope.loggedIn = false;
 			}
 		},
