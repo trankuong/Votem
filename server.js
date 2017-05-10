@@ -14,8 +14,14 @@ var db = require('./config/db');
 var port = process.env.PORT || 3000;
 
 // Connect to mongodb
-//mongoose.connect(db.url, db.login);
+mongoose.connect(db.url, db.login);
 //mongoose.connect(db.url);
+
+// Test to see if query returns
+var User = require('../models/usermodel');
+User.find().then(
+	console.log("returned from find");
+);
 
 // set up session secret
 app.use(session({
