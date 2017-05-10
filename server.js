@@ -14,7 +14,8 @@ var db = require('./config/db');
 var port = process.env.PORT || 3000;
 
 // Connect to mongodb
-mongoose.connect(db.url, db.login);
+console.log(db.url);
+mongoose.createConnection(db.url, db.login);
 //mongoose.connect(db.url);
 
 // Test to see if query returns
