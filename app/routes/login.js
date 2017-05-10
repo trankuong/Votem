@@ -52,8 +52,7 @@ router.post('/', function(req, res){
 							sess.user = req.body.user;
 							
 							// Set cookie to expire in 20 minutes
-							// sess.cookie.maxAge = 1200000;
-							sess.cookie.maxAge = 120000000;
+							sess.cookie.maxAge = 1200000;
 							
 							res.status(200).json({success: "proceed"});
 						}
