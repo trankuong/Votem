@@ -16,7 +16,9 @@ var port = process.env.PORT || 3000;
 // Connect to mongodb
 //mongoose.createConnection(db.url);
 //mongoose.connect(db.url);
-mongoose.createConnection('mongodb://server:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem');
+//mongoose.createConnection('mongodb://kuong:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem');
+mongoose.createConnection('mongodb://kuong:password@localhost/Votem');
+
 
 // Test to see if query returns
 var User = require('./app/models/usermodel');
