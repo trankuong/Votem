@@ -17,7 +17,8 @@ var port = process.env.PORT || 3000;
 //mongoose.createConnection(db.url);
 //mongoose.connect(db.url);
 //mongoose.createConnection('mongodb://kuong:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem');
-mongoose.createConnection('mongodb://kuong:password@localhost/Votem');
+var db = mongoose.createConnection('mongodb://kuong:password@localhost:27017/Votem');
+console.log(db);
 
 
 // Test to see if query returns
