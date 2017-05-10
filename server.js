@@ -14,7 +14,7 @@ var db = require('./config/db');
 var port = process.env.PORT || 3000;
 
 // Connect to mongodb
-mongoose.connect(db.url, db.login);
+//mongoose.connect(db.url, db.login);
 //mongoose.connect(db.url);
 
 // set up session secret
