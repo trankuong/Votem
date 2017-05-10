@@ -58,8 +58,6 @@ require('./app/routes/routes')(app);
 
 console.log("server started");
 
-server.listen(port, function(){
-	console.log("listening");
-});
+app.listen(port);
 
 exports = module.exports = app;
