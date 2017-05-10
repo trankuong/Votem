@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var app = express();
 
 // config files
-var db = require('config/db');
+var db = require('./config/db');
 
 // set our port
 var port = process.env.PORT || 3000;
@@ -18,7 +18,7 @@ mongoose.connect(db.url, db.login);
 //mongoose.connect(db.url);
 
 // Test to see if query returns
-var User = require('../models/usermodel');
+var User = require('app/models/usermodel');
 User.find().then(
 	function(){
 		console.log("returned from find");
