@@ -12,7 +12,7 @@ var addToTotals = function(tot, ballot){
 			if(!tot[key]) tot[key] = {};
 			
 			for(var item in ballot[key]) {
-				if(!tot[key][item]) tot[key][ballot[key][item]] = 1;
+				if(!tot[key][ballot[key][item]]) tot[key][ballot[key][item]] = 1;
 				else tot[key][ballot[key][item]] += 1;
 			}
 		}

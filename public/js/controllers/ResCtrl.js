@@ -30,6 +30,8 @@ app.controller('ResultController', ['$scope', '$window', 'AppService', function(
 
 			for(var group in groups){
 				$scope.count[group] = {};
+
+				// If form value isn't an array
 				if(!Array.isArray(groups[group][Object.keys(groups[group])[0]])){
 					
 					$scope.count[group]['label'] = [];

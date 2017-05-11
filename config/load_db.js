@@ -15,8 +15,43 @@ var users = [
 		region   : 1
 	},
 	{
-		user     : "jash983h32fe",
-		password : "$2a$10$4Y83atsoORByg7/VI2CB1OZvanMjJLW8KdqevpwsdPg74kMp1sPcu",
+		user     : "Bob",
+		password : "$2a$10$5xKjkgV8RTzVIiMaI05wXu2B3tjA9xauAJlBmqX.dAbK5AP1XbeGS",
+		region   : 1
+	},
+	{
+		user     : "Joe",
+		password : "$2a$10$FqCWOs881VPR5r8sfV.qxOY7wIIx4.ELBDRNMJvXG5t.r.rqCgdHq",
+		region   : 1
+	},
+	{
+		user     : "Mark",
+		password : "$2a$10$cCL44KHaPFfY7j3nBQurcO2JnM6zTVKn9lExJOs/8/ToNyjM.vUBS",
+		region   : 1
+	},
+	{
+		user     : "Tom",
+		password : "$2a$10$dSj4s19BuzJb6pDXtNtpJ.FYFp5smkLs2pJ2LQsPaCdnh6Ja0NbpW",
+		region   : 1
+	},
+	{
+		user     : "test",
+		password : "$2a$10$EiOkSvK82RyM7/TXChZHuO58euKCSfTpMuVjZueqI0iToZtqFuojq",
+		region   : 1
+	},
+	{
+		user     : "test1",
+		password : "$2a$10$sWB0KhbEHg8G8U35PsaZ4e7ALvEjNmg4pp2nzcmODEjFeIeb1A9se",
+		region   : 1
+	},
+	{
+		user     : "test2",
+		password : "$2a$10$2orC.GwYXg9vUJYNdNm6y.KPi17SIuHWA/v8Q0KEQfNNafZkufsVi",
+		region   : 1
+	},
+	{
+		user     : "test3",
+		password : "$2a$10$iR7ThMwjM0FWq1TzNpFNHOgoV4xpBxGC5rRjO3PWiEgp6X.GDUff2",
 		region   : 1
 	},
 	{

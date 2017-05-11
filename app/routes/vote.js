@@ -88,7 +88,7 @@ router.post('/:id([0-9]{1,})', function(req, res){
 				// No history of user or id not in array
 				else{
 					if(!req.body.password) res.status(401).json({error: "Need password"});
-					else if(!/^[0-9A-Za-z., _+=@~`-]+$/.test(req.body.password)) res.status(401).json({error: "Password has invalid character(s)"});
+					else if(!/^[0-9A-Za-z., _+=@~`\-]+$/.test(req.body.password)) res.status(401).json({error: "Password has invalid character(s)"});
 					else{
 						User.findOne({user: sess.user}, function(err, db_user_res){
 							

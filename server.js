@@ -14,13 +14,7 @@ var db = require('./config/db');
 var port = process.env.PORT || 3000;
 
 // Connect to mongodb
-//mongoose.connect("butthole");
-console.log(db.url);
 mongoose.connect(db.url);
-//mongoose.connect(db.url);
-//mongoose.createConnection('mongodb://kuong:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem');
-//var db = mongoose.createConnection('mongodb://kuong:password@localhost:27017/Votem');
-
 
 // set up session secret
 app.use(session({
