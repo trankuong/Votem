@@ -20,15 +20,26 @@ A note, the application uses a database titled Votem_db and has existing collect
 
 ## API Reference
 
-- **[<code>GET</code> login]** 
-- **[<code>POSt</code> login]**
+#### Login
+- **[<code>GET</code> /login]** - Returns status code and object identifying if use is logged in
+```
+Test
+{
+  error: "Not logged in"
+}
+{
+  success: "Already logged in"
+}
 
-- **[<code>GET</code> logout]**
+```
+- **[<code>POSt</code> /login]**
 
-- **[<code>GET</code> vote]**
-- **[<code>POST</code> vote/:id]**
+- **<code>GET</code> /logout**
 
-- **[<code>GET</code> totalvotes/:id]**
+- **<code>GET</code> /vote**
+- **<code>POST</code> /vote/:id**
+
+- **<code>GET</code> /totalvotes/:id**
 
 ## Contributors
 
