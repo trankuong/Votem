@@ -19,8 +19,12 @@ After, you should be able to run <code>node server.js</code> to run the applicat
 A note, the application uses a database titled Votem_db and has existing collectoins "users" and "regions". You will not be able to log into the system if there is no users table populated correctly.
 
 ## API Reference
+* [Login Route](#login)
+* [Logout Route](#logout)
+* [Vote Route](#vote)
+* [Totalvotes Route](#totalvotes)
 
-#### Login Route
+### Login
 - **<code>GET</code> /login** - Returns status code and object identifying if use is logged in, checks using sessions
 User has no session
 ```
@@ -37,10 +41,10 @@ User has a session
 ```
 - **<code>POST</code> /login** - Handles sending login information. Takes in key value paires for __user__ and __password__. Creates a session for max of 20 minutes.
 
-#### Logout Route
+### Logout
 - **<code>GET</code> /logout** - Destroys user's session.
 
-#### Vote Route
+### Vote
 - **<code>GET</code> /vote** - Determines is the user has already voted
 If the user has voted in elections, it will return an array of all elections voted in
 ```
@@ -52,7 +56,7 @@ If the user has voted in elections, it will return an array of all elections vot
 Takes in an object that has keys __password__ and __form__.
 Form needs to be an object with values being strings or arrays.
 
-#### Totalvotes Route
+### Totalvotes
 - **<code>GET</code> /totalvotes/:id** - Returns a json object of all the election results for the election specified by the id
 For non-ranking ballot fields
 ```
