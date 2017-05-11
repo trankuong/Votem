@@ -1,18 +1,34 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This is an election handling system. It accepts and shows the election results for a mock election.
+This application was built on the MEAN stack.
+
+A live version of the site can be found  at **[http://ec2-34-207-96-182.compute-1.amazonaws.com:3000/](http://ec2-34-207-96-182.compute-1.amazonaws.com:3000/)**
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Built for the intention of creating a rough online voting application to show to Votem.
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+To run locally, you need to have node and npm installed.
+You will need to install mongodb, this can be done with <cod>npm install mongodb</code>
+You can download the files to your local machine and run <code>npm install</code> to download the dependencies.
+After, you should be able to run <code>node server.js</code> to run the application and view it at localhost:3000.
+
+A note, the application uses a database titled Votem_db and has existing collectoins "users" and "regions". You will not be able to log into the system if there is no users table populated correctly.
 
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+- **[<code>GET</code> login]** 
+- **[<code>POSt</code> login]**
+
+- **[<code>GET</code> logout]**
+
+- **[<code>GET</code> vote]**
+- **[<code>POST</code> vote/:id]**
+
+- **[<code>GET</code> totalvotes/:id]**
 
 ## Contributors
 
