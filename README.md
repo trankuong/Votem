@@ -20,26 +20,57 @@ A note, the application uses a database titled Votem_db and has existing collect
 
 ## API Reference
 
-#### Login
-- **[<code>GET</code> /login]** - Returns status code and object identifying if use is logged in
+#### Login Route
+- **<code>GET</code> /login** - Returns status code and object identifying if use is logged in, checks using sessions
+User has no session
 ```
-Test
 {
   error: "Not logged in"
 }
+```
+User has a session
+```
 {
   success: "Already logged in"
 }
 
 ```
-- **[<code>POSt</code> /login]**
+- **<code>POST</code> /login** - Handles sending login information. Takes in key value paires for __user__ and __password__. Creates a session for max of 20 minutes.
 
-- **<code>GET</code> /logout**
+#### Logout Route
+- **<code>GET</code> /logout** - Destroys user's session.
 
-- **<code>GET</code> /vote**
-- **<code>POST</code> /vote/:id**
+#### Vote Route
+- **<code>GET</code> /vote** - Determines is the user has already voted
+If the user has voted in elections, it will return an array of all elections voted in
+```
+{
+  'electionids' : [1, 2, 3]
+}
+```
+- **<code>POST</code> /vote/:id** - Handles ballot submissions
+Takes in an object that has keys __password__ and __form__.
+Form needs to be an object with values being strings or arrays.
 
-- **<code>GET</code> /totalvotes/:id**
+#### Totalvotes Route
+- **<code>GET</code> /totalvotes/:id** - Returns a json object of all the election results for the election specified by the id
+For non-ranking ballot fields
+```
+{
+  question : {
+               choice1: amount, 
+               choice2: amount
+                    ...
+              }
+}
+```
+For ranking fields *(where voters rank choices from 1-n)*
+```
+  question : {
+               choice1: [rank, rank, rank],
+                           ...
+              }
+```
 
 ## Contributors
 
