@@ -3,6 +3,6 @@ module.exports = {
 	//url : (process.env.MONGOLAB_URI || 'mongodb://localhost/Votem_db'),
 
 	// For aws 
-	url   : 'mongodb://sever:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem_db',
+	url   : 'mongodb://server:1VCnSCvzsB5KACZdxHoKeIKHqwzRBa@localhost/Votem',
 	login : {user: "server", pass: "1VCnSCvzsB5KACZdxHoKeIKHqwzRBa"}
 }
