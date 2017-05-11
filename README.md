@@ -2,6 +2,7 @@
 
 This is an election handling system. It accepts and shows the election results for a mock election.
 This application was a quick and simple application built on the MEAN stack. 
+
 The app around one week to create while starting from scratch and learning the MEAN stack.
 
 A live version of the site can be found  at **[http://ec2-34-207-96-182.compute-1.amazonaws.com:3000/](http://ec2-34-207-96-182.compute-1.amazonaws.com:3000/)**
