@@ -78,4 +78,4 @@ For ranking fields *(where voters rank choices from 1-n)*
 
 ## Contributors
 
-Application written by Kuong Tran
+Application written by __Kuong Tran__
